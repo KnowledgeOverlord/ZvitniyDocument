@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіт з лабораторних робіт</title>
+    <script>
+        function changeButtons(labNumber) {
+            const container = document.getElementById('lab-buttons');
+            container.innerHTML = '';
+            switch (labNumber) {
+                case 1:
+                    addButton(container, 'Опис проєктного середовища', handleButtonClick);
+                    addButton(container, 'Тема/Мета місце розташування лаби №1', handleButtonClick);
+                    addButton(container, 'HTML-код таблиць', handleButtonClick);
+                    addButton(container, 'Структура документа', handleButtonClick);
+                    addButton(container, 'Висновки', handleButtonClick);
+                    break;
+
+                case 2:
+                   break;
+            }
+        }
+
+        function addButton(container, text, clickHandler) {
+            const button = document.createElement('button');
+            button.textContent = text; 
+            button.onclick = clickHandler; 
+            container.appendChild(button);
+        }
+
+        function handleButtonClick(event) {
+            const buttonText = event.target.textContent; 
+            const section = document.querySelector('section');
+
+            switch (buttonText) {
+            case 'Опис проєктного середовища':
+                section.innerHTML = `<pre>привіт 
+як справи</pre>`;
+                break;
+            case 'Тема/Мета місце розташування лаби №1':
+                section.innerHTML = section.innerHTML = `<pre>привіт 
+                    як справи</pre>`;
+                break;
+            case 'HTML-код таблиць':
+                section.innerHTML =section.innerHTML = `<pre>привіт 
+                    як справи</pre>`;
+                break;
+            case 'Структура документа':
+                section.innerHTML = section.innerHTML = `<pre>привіт 
+                    як справи</pre>`;
+                break;
+            case 'Висновки':
+                section.innerHTML = section.innerHTML = `<pre>привіт 
+                    як справи</pre>`;
+                break;
+        }
+        }  
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, nav, main {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        header {
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        main {
+            display: flex;
+            gap: 10px;
+        }
+        section {
+            flex-grow: 1;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        button {
+            cursor: pointer;
+        }
+        pre {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: pre-wrap; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ЗВІТ З ЛАБОРАТОРНИХ РОБІТ</h1>
+        <p>З дисципліни: Інтернет-технології та проектування веб-застосувань</p>
+        <div>Студент групи: ІС-32 <span>Стрельнік Максим Сергійович</span></div>
+    </header>
+    <nav>
+        <div class="button-group">
+            <button onclick="changeButtons(1)">Лабораторна робота №1</button>
+            <button onclick="changeButtons(2)">Лабораторна робота №2</button>
+            <button onclick="changeButtons(3)">Лабораторна робота №3</button>
+            <button onclick="changeButtons(4)">Лабораторна робота №4</button>
+            <button onclick="changeButtons(5)">Лабораторна робота №5</button>
+            <button onclick="changeButtons(6)">Лабораторна робота №6</button>
+            <button onclick="changeButtons(7)">Лабораторна робота №7</button>
+            <button onclick="changeButtons(8)">Лабораторна робота №8</button>
+            <button onclick="changeButtons(9)">Лабораторна робота №9</button>
+        </div>
+    </nav>
+    <main>
+        <div style="width: 20%; display: flex; flex-direction: column; gap: 10px;" id="lab-buttons"></div>
+        <section style="min-height: 400px; max-height: 400px; overflow-y: auto ">
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
