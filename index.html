@@ -12,13 +12,22 @@
                 case 1:
                     addButton(container, 'Опис проєктного середовища', handleButtonClick);
                     addButton(container, 'Тема/Мета місце розташування лаби №1', handleButtonClick);
-                    addButton(container, 'HTML-код таблиць', handleButtonClick);
                     addButton(container, 'Структура документа', handleButtonClick);
-                    addButton(container, 'Висновки', handleButtonClick);
+                    addButton(container, 'Висновки1', handleButtonClick);
                     break;
 
                 case 2:
+                    addButton(container, 'Тема, Мета ЛР №2', handleButtonClick);
+                    addButton(container, 'Способи підключення стилів', handleButtonClick);
+                    addButton(container, 'Селектори', handleButtonClick);
+                    addButton(container, 'Висновки2', handleButtonClick);
                    break;
+                case 4:
+                    addButton(container, 'Тема, Мета ЛР №4', handleButtonClick);
+                    addButton(container, 'Результат', handleButtonClick);
+                    addButton(container, 'Пояснення', handleButtonClick);
+                    addButton(container, 'Висновки4', handleButtonClick);
+                    break;
             }
         }
 
@@ -35,25 +44,56 @@
 
             switch (buttonText) {
             case 'Опис проєктного середовища':
-                section.innerHTML = `<pre>привіт 
-як справи</pre>`;
+                section.innerHTML = `<pre>Веб-застосунок для купівлі комп'ютерних ігор
+Веб-застосунок для купівлі комп'ютерних ігор дозволяє користувачам переглядати різні ігри, ознайомлюватися з їх описом, ціною та технічними вимогами. Користувачі можуть додавати обрані ігри до кошика та здійснювати покупку через інтегровану платіжну систему. Після завершення оплати користувач отримує можливість завантажити гру. Користувач із правами адміністратора може редагувати наявні ігри в каталозі, змінювати їхні характеристики, додавати нові ігри та видаляти застарілі або непотрібні позиції.
+                    </pre>`;
                 break;
             case 'Тема/Мета місце розташування лаби №1':
-                section.innerHTML = section.innerHTML = `<pre>привіт 
-                    як справи</pre>`;
-                break;
-            case 'HTML-код таблиць':
-                section.innerHTML =section.innerHTML = `<pre>привіт 
-                    як справи</pre>`;
+                section.innerHTML = section.innerHTML = `<pre>Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ.
+РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.
+
+Мета: придбати практичні навички роботи  з HTML-документом, таблицями, , зображеннями, посиланнями, списками, формами
+Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.
+</pre>`;
                 break;
             case 'Структура документа':
-                section.innerHTML = section.innerHTML = `<pre>привіт 
-                    як справи</pre>`;
+                section.innerHTML = section.innerHTML = `<pre><img src="/Без імені.png" alt=""></pre>`;
                 break;
-            case 'Висновки':
-                section.innerHTML = section.innerHTML = `<pre>привіт 
-                    як справи</pre>`;
+            case 'Висновки1':
+                section.innerHTML = section.innerHTML = `<pre>Під час виконання лабораторної роботи навчився застосовувати різні теги: таблиці, форми, фото, заголовки.  </pre>`;
                 break;
+            case 'Тема, Мета ЛР №2':
+                section.innerHTML = section.innerHTML = `<pre>Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ
+                    
+Мета: придбати практичні навички роботи  з селекторами, ідентифікаторами, списками,  різноманітними властивостями кольору і фону,  зовнішними та внутрішними  відступами,  плаваючими елементами, оформленням текстових елементів</pre>`;
+                break;
+            case 'Способи підключення стилів':
+                section.innerHTML = section.innerHTML = `<pre>Існує 3 типи підключення селекторів: Inline-стилі, внутрішні стилі, зовнішні стилі.
+Inline стиль задається безпосередньо в атрибути style елемента
+Внутрішні стилі - прописуються в межах тега style у заголовку HTML-документа
+Зовнішні стилі — підключаються через зовнішній CSS-файл за допомогою тега link.  </pre>`;
+                break;
+            case 'Селектори':
+                section.innerHTML = section.innerHTML = `<pre> <img src="/2laba.png" width="600" height="300" alt="2laba"> </pre>`;
+                break;
+            case 'Висновки2':
+                section.innerHTML = section.innerHTML = `<pre>Під час виконання лабораторної роботи придбати практичні навички роботи  з селекторами, ідентифікаторами, списками.</pre>`;
+                break;
+            case 'Тема, Мета ЛР №4':
+                section.innerHTML = section.innerHTML = `<pre>Тема:  АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT. СТРАТЕГІЯ MOBILE FIRST.  
+                    
+Мета: Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції.Метатег viewport. Інструменти розробника. Стратегія Mobile First. </pre>`;
+                break;
+            case 'Результат':
+                section.innerHTML = section.innerHTML = `<pre><img src="/4.png" alt="" width="600" height="300"></pre>`;
+                break;
+            case 'Пояснення':
+                section.innerHTML = section.innerHTML = `<pre></pre>`;
+                break;
+            case 'Висновки4':
+                section.innerHTML = section.innerHTML = `<pre>Під час виконання лабораторної роботи навчився використовув теоретичні знання в практиці про адаптивна верстку, медіа-запити, медіа-типи, медіа-функції, метатег viewport, інструменти розробника та стратегія Mobile First.</pre>`;
+                break;
+            
         }
         }  
     </script>
@@ -86,7 +126,6 @@
         section {
             flex-grow: 1;
             border: 1px solid black;
-            padding: 10px;
             text-align: left;
             white-space: pre-wrap;
         }
@@ -122,7 +161,7 @@
     </nav>
     <main>
         <div style="width: 20%; display: flex; flex-direction: column; gap: 10px;" id="lab-buttons"></div>
-        <section style="min-height: 400px; max-height: 400px; overflow-y: auto ">
+        <section style="width: 80%; min-height: 400px; max-height: 400px; overflow-y: auto ">
         </section>
     </main>
     <footer></footer>
