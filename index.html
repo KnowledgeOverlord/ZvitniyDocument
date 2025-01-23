@@ -28,6 +28,11 @@
                     addButton(container, 'Пояснення', handleButtonClick);
                     addButton(container, 'Висновки4', handleButtonClick);
                     break;
+                case 5:
+                    addButton(container, 'Тема, Мета ЛР №5', handleButtonClick);
+                    addButton(container, 'Завдання 1-4', handleButtonClick);
+                    addButton(container, 'Завдання 5', handleButtonClick);
+                    addButton(container, 'Висновки5', handleButtonClick);
             }
         }
 
@@ -93,7 +98,181 @@ Inline стиль задається безпосередньо в атрибу�
             case 'Висновки4':
                 section.innerHTML = section.innerHTML = `<pre>Під час виконання лабораторної роботи навчився використовув теоретичні знання в практиці про адаптивна верстку, медіа-запити, медіа-типи, медіа-функції, метатег viewport, інструменти розробника та стратегія Mobile First.</pre>`;
                 break;
-            
+            case 'Тема, Мета ЛР №5':
+                section.innerHTML = section.innerHTML = `<pre>Тема:  ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. 
+ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ МОВИ JAVASCRIPT
+
+
+Мета: придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях.  Реалізація програм засовами мови JAVASCRIPT</pre>`;
+                break;
+                case 'Завдання 1-4':
+    section.innerHTML = `
+        <pre><img src="/5laba.png" alt="">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function makeTransaction(quantity, pricePerDroid) {
+            let totalPrice = quantity * pricePerDroid;
+            console.log("You ordered " + quantity + " droids worth " + totalPrice + " credits!");
+        }
+        let quantity = prompt("Введіть кількість куплених дроїдів");
+        let pricePerDroid = prompt("Введіть ціну дроїдів");
+        makeTransaction(quantity, pricePerDroid);
+
+        function checkForSpam(message) {
+            const lowerCaseMessage = message.toLowerCase();
+            return lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale');
+        }
+        console.log(checkForSpam("dsgsg SALE gkjngnskg"));
+        console.log(checkForSpam("lksndgnlsmf spam"));
+        console.log(checkForSpam("This is a safe message."));
+
+        let numbers = [15, 5, 7, 99, 24, 346, 24, 4, 400, 23];
+        let value = 10;
+        filterArray(numbers, value);
+        function filterArray(numbers, value) {
+            let numbers2 = [];
+            for (const number of numbers) {
+                if (number > value) {
+                    numbers2.push(number);
+                }
+            }
+            console.log(numbers2);
+        }
+
+        let A = [15, 5, 7, 99, 24, 346, 24, 4, 400, 23];
+        let B = [];
+        let MaxA = Number.MIN_VALUE;
+        for (const a_ of A) {
+            if (a_ > MaxA) {
+                MaxA = a_;
+            }
+        }
+        for (let index = 0; index < A.length; index++) {
+            B[index] = A[index] * MaxA;
+        }
+        let SortedB = sortArrayDescending(B);
+        function sortArrayDescending(array) {
+            for (let i = 1; i < array.length; i++) {
+                let key = array[i];
+                let j = i - 1;
+                while (j >= 0 && array[j] < key) {
+                    array[j + 1] = array[j];
+                    j--;
+                }
+                array[j + 1] = key;
+            }
+            return array;
+        }
+        console.log(A);
+        console.log(B);
+        console.log(SortedB);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>`;
+    break;
+            case 'Завдання 5':
+                section.innerHTML = section.innerHTML = `<pre><img src="/5laba5task.png" alt="">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Calculator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Calculator&lt;/h1&gt;
+    &lt;input type="text" id="display" placeholder="0" disabled&gt;
+    &lt;br&gt;
+    &lt;button onclick="appendNumber('1')"&gt;1&lt;/button&gt;
+    &lt;button onclick="appendNumber('2')"&gt;2&lt;/button&gt;
+    &lt;button onclick="appendNumber('3')"&gt;3&lt;/button&gt;
+    &lt;button onclick="setOperation('+')"&gt;+&lt;/button&gt;
+    &lt;br&gt;
+    &lt;button onclick="appendNumber('4')"&gt;4&lt;/button&gt;
+    &lt;button onclick="appendNumber('5')"&gt;5&lt;/button&gt;
+    &lt;button onclick="appendNumber('6')"&gt;6&lt;/button&gt;
+    &lt;button onclick="setOperation('-')"&gt;-&lt;/button&gt;
+    &lt;br&gt;
+    &lt;button onclick="appendNumber('7')"&gt;7&lt;/button&gt;
+    &lt;button onclick="appendNumber('8')"&gt;8&lt;/button&gt;
+    &lt;button onclick="appendNumber('9')"&gt;9&lt;/button&gt;
+    &lt;button onclick="setOperation('*')"&gt;*&lt;/button&gt;
+    &lt;br&gt;
+    &lt;button onclick="appendNumber('0')"&gt;0&lt;/button&gt;
+    &lt;button onclick="calculate()"&gt;=&lt;/button&gt;
+    &lt;button onclick="clearDisplay()"&gt;C&lt;/button&gt;
+    &lt;button onclick="setOperation('/')"&gt;/&lt;/button&gt;
+    &lt;br&gt;
+    &lt;button onclick="setOperation('%')"&gt;%&lt;/button&gt;
+    &lt;button onclick="squareRoot()"&gt;√&lt;/button&gt;
+    &lt;button onclick="setOperation('^')"&gt;x^y&lt;/button&gt;
+
+    &lt;script&gt;
+        let currentInput = '';
+        let firstOperand = null;
+        let operation = null;
+
+        function appendNumber(number) {
+            currentInput += number;
+            document.getElementById('display').value = currentInput;
+        }
+
+        function setOperation(op) {
+            if (currentInput !== '') {
+                firstOperand = parseFloat(currentInput);
+                operation = op;
+                currentInput = '';
+            }
+        }
+
+        function calculate() {
+            if (firstOperand !== null && currentInput !== '') {
+                const secondOperand = parseFloat(currentInput);
+                let result;
+                switch (operation) {
+                    case '+': result = firstOperand + secondOperand; break;
+                    case '-': result = firstOperand - secondOperand; break;
+                    case '*': result = firstOperand * secondOperand; break;
+                    case '/': result = firstOperand / secondOperand; break;
+                    case '%': result = firstOperand % secondOperand; break;
+                    case '^': result = Math.pow(firstOperand, secondOperand); break;
+                }
+                document.getElementById('display').value = result;
+                currentInput = result.toString();
+                firstOperand = null;
+                operation = null;
+            }
+        }
+
+        function squareRoot() {
+            if (currentInput !== '') {
+                const result = Math.sqrt(parseFloat(currentInput));
+                document.getElementById('display').value = result;
+                currentInput = result.toString();
+            }
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            firstOperand = null;
+            operation = null;
+            document.getElementById('display').value = '';
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>`;
+                break;
+            case 'Висновки5':
+                section.innerHTML = section.innerHTML = `<pre>Після виконання лабораторної роботи придбав практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях, також реалізував просту програму(калькулятор) засобами мови JavaScript</pre>`;
+                break;
         }
         }  
     </script>
