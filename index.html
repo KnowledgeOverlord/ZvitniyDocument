@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіт з лабораторних робіт</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function changeButtons(labNumber) {
+            const container = document.getElementById('lab-buttons');
+            container.innerHTML = '';
+            switch (labNumber) {
+                case 1:
+                    addButton(container, 'Опис проєктного середовища', handleButtonClick);
+                    addButton(container, 'Тема/Мета місце розташування лаби №1', handleButtonClick);
+                    addButton(container, 'Структура документа', handleButtonClick);
+                    addButton(container, 'Висновки1', handleButtonClick);
+                    break;
+
+                case 2:
+                    addButton(container, 'Тема, Мета ЛР №2', handleButtonClick);
+                    addButton(container, 'Способи підключення стилів', handleButtonClick);
+                    addButton(container, 'Селектори', handleButtonClick);
+                    addButton(container, 'Висновки2', handleButtonClick);
+                   break;
+                case 3:
+                    addButton(container, 'Тема, Мета ЛР №3', handleButtonClick);
+                    addButton(container, 'Завдання 1', handleButtonClick);
+                    addButton(container, 'Завдання 2', handleButtonClick);
+                    addButton(container, 'Висновки3', handleButtonClick);
+                    break;
+                case 4:
+                    addButton(container, 'Тема, Мета ЛР №4', handleButtonClick);
+                    addButton(container, 'Завдання 1-8', handleButtonClick);
+                    addButton(container, 'Завдання 9', handleButtonClick);
+                    addButton(container, 'Висновки4', handleButtonClick);
+            }
+        }
+
+        function addButton(container, text, clickHandler) {
+            const button = document.createElement('button');
+            button.textContent = text; 
+            button.onclick = clickHandler; 
+            container.appendChild(button);
+        }
+
+        function handleButtonClick(event) {
+            const buttonText = event.target.textContent; 
+            const section = document.querySelector('section');
+
+            switch (buttonText) {
+            case 'Опис проєктного середовища':
+                section.innerHTML = `<pre>Веб-застосунок для купівлі готових букетів
+                    </pre>`;
+                break;
+            case 'Тема/Мета місце розташування лаби №1':
+                section.innerHTML = section.innerHTML = `<pre>Тема:ТЕГИ ТА АТРИБУТИ HTML-ДОКУМЕНТА. СТРУКТУРНА РОЗМІТКА. GIT.GITHUB. РОБОТА З РЕПОЗИТОРІЯМИ. ОПИС ЛОГІКИ ВЛАСНОГО WEB-ЗАСТОСУНКУ
+
+Мета: придбати практичні навички роботи  з GitHub, репозиторіями, HTML-документом, таблицями, , зображеннями, посиланнями, списками, формами
+Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт
+
+</pre>`;
+                break;
+            case 'Структура документа':
+                section.innerHTML = section.innerHTML = `<pre><img src="images/1.png" alt=""></pre>`;
+                break;
+            case 'Висновки1':
+                section.innerHTML = section.innerHTML = `<pre>Під час виконання лабораторної роботи навчився застосовувати різні теги: таблиці, форми, фото, заголовки.  </pre>`;
+                break;
+            case 'Тема, Мета ЛР №2':
+                section.innerHTML = section.innerHTML = `<pre>Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ ТЕГУ,КЛАСУ, ІДЕНТИФІКАТОРА. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ
+                    
+Мета: придбати практичні навички роботи  з селекторами, ідентифікаторами, списками,  різноманітними властивостями кольору і фону,  зовнішними та внутрішними  відступами,  плаваючими елементами, оформленням текстових елементів</pre>`;
+                break;
+            case 'Способи підключення стилів':
+                section.innerHTML = section.innerHTML = `<pre>Існує 3 типи підключення селекторів: Inline-стилі, внутрішні стилі, зовнішні стилі.
+Inline стиль задається безпосередньо в атрибути style елемента
+Внутрішні стилі - прописуються в межах тега style у заголовку HTML-документа
+Зовнішні стилі — підключаються через зовнішній CSS-файл за допомогою тега link.  </pre>`;
+                break;
+            case 'Селектори':
+                section.innerHTML = section.innerHTML = `<pre> <img src="images/2.png" alt="" width="600" height="300"> </pre>`;
+                break;
+            case 'Висновки2':
+                section.innerHTML = section.innerHTML = `<pre>Під час виконання лабораторної роботи придбати практичні навички роботи  з селекторами, ідентифікаторами, списками.</pre>`;
+                break;
+            case 'Тема, Мета ЛР №3':
+                section.innerHTML = section.innerHTML = `<pre>Тема: ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА.  ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX. 
+АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT
+Мета: 
+⎯	придбати практичні навички роботи  верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок
+⎯	придбати практичні навички роботи  верстки сторінок засобами CSS та FLEXBOX   
+
+</pre>`;
+                break;
+            case 'Завдання 1':
+                section.innerHTML = section.innerHTML = `<pre><img src="images/3_1.png" alt="" width="600" height="300"></pre>`;
+                break;
+            case 'Завдання 2':
+                section.innerHTML = section.innerHTML = `<pre><img src="images/3_2.png" alt="" width="600" height="300"></pre>`;
+                break;
+            case 'Висновки3':
+                section.innerHTML = section.innerHTML = `<pre>Під час виконання лабораторної роботи я закріпив практичні навички верстки веб-сторінок з використанням мов HTML та CSS. Мною було розроблено структуру головної сторінки згідно з макетом, реалізовано позиціювання блоків.</pre>`;
+                break;
+// ----------------------------------------------------------
+            case 'Тема, Мета ЛР №4':
+                section.innerHTML = section.innerHTML = `<pre>Тема:  ОСНОВИ JAVASCRIPT У HTML-ДОКУМЕНТІ. ШАБЛОНІ РЯДКИ. КЕРУВАННЯ ПОРЯДКОМ ОБЧИСЛЕНЬ. МАСИВИ. МЕТОДИ МАСИВІВ. ФУНКЦІЇ
+                    
+Мета: придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях.  Реалізація програм засовами мови JAVASCRIPT</pre>`;
+                break;
+            case 'Завдання 1-8':
+                section.innerHTML = section.innerHTML = `<pre><img src="images/4_1.png" alt="" width="600"></pre>`;
+                break;
+            case 'Завдання 9':
+                section.innerHTML = section.innerHTML = `<pre><img src="images/4_2_1.png" alt="" width="600" height="300"><img src="images/4_2_2.png" alt="" width="600" height="300"></pre>`;
+                break;
+            case 'Висновки4':
+                section.innerHTML = section.innerHTML = `<pre>Під час виконання лабораторної роботи я ознайомився з основами мови JavaScript та її інтеграцією в HTML-документ. Я набув практичних навичок роботи зі змінними, функціями, умовними конструкціями та циклами. Також я навчився обробляти масиви і реалізував інтерактивну програму «Будильник», використовуючи методи роботи з часом та таймерами.</pre>`;
+                break;
+        }
+        }  
+    </script>
+    
+</head>
+<body>
+    <header>
+        <header>
+            <h1>ЗВІТ З ЛАБОРАТОРНИХ РОБІТ</h1>
+            <p>З дисципліни: WEB-ОРІЄНТОВНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ</p>
+            <div>
+                Студент групи: ІС-32 <span>Стрельнік Максим Сергійович</span> 
+            </div>
+            <div style="text-align: right;">
+                <img src="images/photo.png" alt="" width="200px">
+            </div>
+        </header>
+    </header>
+    <nav>
+        <div class="button-group">
+            <button onclick="changeButtons(1)">Лабораторна робота №1</button>
+            <button onclick="changeButtons(2)">Лабораторна робота №2</button>
+            <button onclick="changeButtons(3)">Лабораторна робота №3</button>
+            <button onclick="changeButtons(4)">Лабораторна робота №4</button>
+            <!-- <button onclick="changeButtons(5)">Лабораторна робота №5</button>
+            <button onclick="changeButtons(6)">Лабораторна робота №6</button>
+            <button onclick="changeButtons(7)">Лабораторна робота №7</button> -->
+        </div>
+    </nav>
+    <main>
+        <div style="width: 20%; display: flex; flex-direction: column; gap: 10px;" id="lab-buttons"></div>
+        <section style="width: 80%; min-height: 400px; max-height: 400px; overflow-y: auto;">
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

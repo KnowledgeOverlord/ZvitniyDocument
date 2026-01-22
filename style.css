@@ -1,0 +1,40 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, nav, main {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;    
+        }
+        header {
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        main {
+            display: flex;
+            gap: 10px;
+        }
+        section {
+            flex-grow: 1;
+            border: 1px solid black;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        button {
+            cursor: pointer;
+        }
+        pre {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: pre-wrap; 
+        }
